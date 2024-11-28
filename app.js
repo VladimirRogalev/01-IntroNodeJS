@@ -14,7 +14,8 @@ const server = http.createServer(function (req, res) {
     }
     if (req.url.startsWith('/hello?name') ) {
         res.writeHead(200, {'Content-Type': 'text/html'});
-        let name = url.parse(req.url,true);
+        let parseUrl = url.parse(req.url,true).query;
+        let name = parseUrl.name;
         res.end(`<h1>Hello ${name}</h1>`);
     }
 
