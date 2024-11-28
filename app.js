@@ -5,7 +5,7 @@ var url = require('url')
 const server = http.createServer(function (req, res) {
     if (req.url == '/') {
         res.writeHead(200, {'Content-Type': 'text/html; charset=utf-8'});
-        res.end('<h1>Hello World! Добро пожаловать!! שלום! </h1>');
+        res.end('<h1>Hello World! Добро пожаловать!!! שלום! </h1>');
     }
     if (req.url == '/time') {
         res.writeHead(200, {'Content-Type': 'text/html'});
